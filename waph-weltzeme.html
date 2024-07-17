@@ -51,7 +51,7 @@ href=https://waph-uc.github.io/style1.css>
 				ctx.translate(radius, radius);
 				radius = radius * 0.90
 				setInterval(drawClock, 1000);
-
+				
 				function drawClock(){
 					drawFace(ctx, radius);
 					drawNumbers(ctx, radius);
@@ -108,15 +108,16 @@ href=https://waph-uc.github.io/style1.css>
 
 				$.get("https://v2.jokeapi.dev/joke/Programming?type=single",
 					function(result) {
-						// console.log("From jokeAPI: " + JSON.stringify(result));
+						console.log("From jokeAPI: " + JSON.stringify(result));
 						$("#response").html("A programming joke of the day: " + result.joke);
-					})
-
+					});
+				
 				(async function jokeAPIfetch(){
 					const jokeAPI_res= await fetch("https://v2.jokeapi.dev/joke/Programming?type=single");
 					const result = await jokeAPI_res.json();
 					$("#response").html("A programmign joke of the day: " + result.joke);
-				})()
+				}());
+			
 
 				fetch("https://v2.jokeapi.dev/joke/Programming?type=single")
 					.then((response) => {
@@ -125,12 +126,30 @@ href=https://waph-uc.github.io/style1.css>
 						$("#response").html("A programming joke of the day: " + result.joke);
 					})
 
+				async function fetchJokeWithAsyncAwait() {
+				try {
+					const jokeAPI_res = await fetch("https://v2.jokeapi.dev/joke/Any?type=single");
+					const result = await jokeAPI_res.json();
+					$("#response").html("A programming joke of the day: " + result.joke);
+				} catch (error) {
+					console.error("Error fetching joke:", error);
+				}
+				}
+
+				setInterval(fetchJokeWithAsyncAwait, 60000);
+				fetchJokeWithAsyncAwait();
+
 				async function guessAge(name) {
 					const response = await fetch("https://api.agify.io/?name="+name);
 					const result = await response.json();
 					$("#response").html("Hi " + name + ", your age should be " + result.age);
 				}
-
+				
+				if(document.cookie.indexOf("username")< 0){
+					alert('no username in cookie, set a new one');
+					document.cookie="username=weltzeme";
+				}else
+					alert("my cookie:" + document.cookie);
 			</script>
 		</div>
 <div id="main">
@@ -162,6 +181,22 @@ href=https://waph-uc.github.io/style1.css>
 		<input class="button round" type="button" value="guess Age" onclick="guessAge($('#data').val())">
 		<div id="response"></div>
 	</div>
+	<h1>Random Cat Image</h1>
+    <div id="cat-image"></div>
+    <button id="new-cat-button">Get New Cat</button>
+    <script>
+        const fetchCatImage = () => {
+            fetch('https://api.thecatapi.com/v1/images/search')
+                .then(response => response.json())
+                .then(data => {
+                    const catImageDiv = document.getElementById('cat-image');
+                    catImageDiv.innerHTML = `<img src="${data[0].url}" alt="Random Cat" width="300">`;
+                })
+                .catch(error => console.error('Error fetching the cat image:', error));
+        };
+        document.getElementById('new-cat-button').addEventListener('click', fetchCatImage);
+        fetchCatImage();
+    </script>
 	<hr>
 	<b>Experiments with Javascript code</b><br>
 	<i>Inlined Javascript</i>
