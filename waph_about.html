@@ -1,20 +1,10 @@
 <!DOCTYPE html>
 <html lang="en"></html>
 <head>
-	<title>Morgan Weltzer Portfolio Website WAPH Project 1</title>
+	<title>Web Application Programming and Hacking Class</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-XXXXX-Y"></script>
-	<!-- Google tag (gtag.js) -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-75ZST0H9DD"></script>
-	<script>
-	window.dataLayer = window.dataLayer || [];
-	function gtag(){dataLayer.push(arguments);}
-	gtag('js', new Date());
-
-	gtag('config', 'G-75ZST0H9DD');
-	</script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -36,29 +26,33 @@
 			<ul class="nav navbar-nav navbar-right text-small">
 			  <li><a href="/index.html">Home</a></li>
 			  <li><a href="/background.html">About Me</a></li>
-			  <li><a href="/waph_about.html" class="phone-link">Web Applicaiton and Hacking</a></li>
+			  <li><a href="/waph.html" class="phone-link">Web Applicaiton and Hacking</a></li>
 			</ul>
 		  </div>
 		</div>
 	  </nav>
-  <!-- name and headshot -->
+  <!-- waph title -->
   <div class="container-fluid bg-1 text-center">
-	<h1>Morgan Weltzer</h3>
-	<img src="/images/headshot.png" class="img-circle headshot-image" alt="Headshot">
-	<h2>Portfolio</h3>
+	<h1>Web Application Programming and Hacking (WAPH)</h3>
   </div>
   
-  <!-- short bio -->
+  <!-- about waph -->
   <div class="container-fluid bg-2 text-center">
-	<h3>My Interests</h3>
-	<p>I am a Computer Science at the University of Cincinnati. I am interested in learning more about frontend development and UI/UX design.</p>
+	<h3 class="text-medium">About WAPH</h3>
+    <p class="text-small">I am currently taking a class that centers around teaching students how to develop web applications securely and efficiently.<p>
+    <p class="text-small">I am excited to learn more about web development and how to make applications secure.<p>
+    <p class="text-small">My Professor is Phu Phung and I am taking this class as a part of my curriculum at University of Cincinnati<p>
   </div>
   
-  <!-- resume link -->
-  <div class="container-fluid bg-3 text-center">
-	<h3>Checkout My Resume</h3>
-	<a href="/Morgan Weltzer 2023 PDF.pdf" class="text-button">Resume</a>
+  <!-- projects -->
+  <div class="container-fluid bg-3">
+	<h3 class="text-center text-medium">Projects</h3>
+    <p class="text-bold-small">Simple About Me Website</p>
+	<li class= "text-small">This website was one of our firt experiences learning about web development. We were tasked with creating a simple "get to know me" page that can be hosted with php and apache. This website integrates 2 public Web APIs.</li>
+    <p class="text-bold-small">Remembering Cookies</p>
+    <li>Worked on a variety of projects with data automation using Workato and Python. Spearheaded AI research projects and created proof of concept prototypes for a chatbot.</li>
   </div>
+
 
   <!-- social media links -->
   <div class="container-fluid bg-2 text-center">
@@ -75,19 +69,4 @@
 	  </div>
 	</div>
 </div>
-<script>
-	(function() {
-		function sendPageView() {
-			var xhr = new XMLHttpRequest();
-			xhr.open("POST", "/track-page-view", true);
-			xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
-			xhr.send(JSON.stringify({
-				url: window.location.href,
-				timestamp: new Date().toISOString()
-			}));
-		}
-
-		window.addEventListener('load', sendPageView);
-	})();
-</script>
 </body>

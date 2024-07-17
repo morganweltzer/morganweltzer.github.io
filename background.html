@@ -1,20 +1,10 @@
 <!DOCTYPE html>
 <html lang="en"></html>
 <head>
-	<title>Morgan Weltzer Portfolio Website WAPH Project 1</title>
+	<title>Morgan Weltzer Background</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-XXXXX-Y"></script>
-	<!-- Google tag (gtag.js) -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-75ZST0H9DD"></script>
-	<script>
-	window.dataLayer = window.dataLayer || [];
-	function gtag(){dataLayer.push(arguments);}
-	gtag('js', new Date());
-
-	gtag('config', 'G-75ZST0H9DD');
-	</script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -36,28 +26,46 @@
 			<ul class="nav navbar-nav navbar-right text-small">
 			  <li><a href="/index.html">Home</a></li>
 			  <li><a href="/background.html">About Me</a></li>
-			  <li><a href="/waph_about.html" class="phone-link">Web Applicaiton and Hacking</a></li>
+			  <li><a href="/waph_about.html">Web Applicaiton and Hacking</a></li>
 			</ul>
 		  </div>
 		</div>
 	  </nav>
-  <!-- name and headshot -->
+  <!-- about me -->
   <div class="container-fluid bg-1 text-center">
-	<h1>Morgan Weltzer</h3>
-	<img src="/images/headshot.png" class="img-circle headshot-image" alt="Headshot">
-	<h2>Portfolio</h3>
+	<h1>About Me</h3>
   </div>
   
-  <!-- short bio -->
+  <!-- education -->
   <div class="container-fluid bg-2 text-center">
-	<h3>My Interests</h3>
-	<p>I am a Computer Science at the University of Cincinnati. I am interested in learning more about frontend development and UI/UX design.</p>
+	<h3 class="text-medium">Education</h3>
+	<img src="/images/UC_LOGO.png" class="img-circle headshot-image" alt="UC">
+    <p class="text-small">I attend University of Cincinnati and am pursuing a degree in Computer Science.<p>
+    <p class="text-small">Upon graduation, I am seeking jobs with frontend development and UI/UX design<p>
   </div>
   
   <!-- resume link -->
+  <div class="container-fluid bg-3">
+	<h3 class="text-center text-medium">Experience</h3>
+    <p class="text-bold-small">Seven Hills Technology</p>
+	<li class= "text-small">Working on custom software projects that use .net, vue.js, CSS, HTML, and Azure.</li>
+    <p class="text-bold-small">Kroger Technology Digital</p>
+    <li>Worked on mobile and web development. Utilized Kotlin for native Android Development and HTML, react.js, and CSS for web development. </li>
+    <p class="text-bold-small">TiER1 Performance Solutions</p>
+    <li>Worked on a variety of projects with data automation using Workato and Python. Spearheaded AI research projects and created proof of concept prototypes for a chatbot.</li>
+  </div>
+  <div class="container-fluid bg-2">
+    <h3 class="text-center text-medium">Skills</h3>
+    <p class="text-bold-small">Languages</p>
+	<li class= "text-small">C++, Kotlin, XML, HTML, CSS, Javascript (vue.js and react.js), </li>
+    <p class="text-bold-small">Softwares & Development Styles</p>
+    <li>I have experience using Figma, Azure, mySql, Miro, Workato, Jira, and working in scrum and kanban development environments.</li>
+    <p class="text-bold-small">Work Styles</p>
+    <li>Worked on a variety of projects with data automation using Workato and Python. Spearheaded AI research projects and created proof of concept prototypes for a chatbot.</li>
+  </div>
   <div class="container-fluid bg-3 text-center">
-	<h3>Checkout My Resume</h3>
-	<a href="/Morgan Weltzer 2023 PDF.pdf" class="text-button">Resume</a>
+    <h3>Checkout My Resume</h3>
+    <a href="/Morgan Weltzer 2023 PDF.pdf" class="background-resume">Resume</a>
   </div>
 
   <!-- social media links -->
@@ -75,19 +83,4 @@
 	  </div>
 	</div>
 </div>
-<script>
-	(function() {
-		function sendPageView() {
-			var xhr = new XMLHttpRequest();
-			xhr.open("POST", "/track-page-view", true);
-			xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
-			xhr.send(JSON.stringify({
-				url: window.location.href,
-				timestamp: new Date().toISOString()
-			}));
-		}
-
-		window.addEventListener('load', sendPageView);
-	})();
-</script>
 </body>

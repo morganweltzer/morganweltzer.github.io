@@ -1,0 +1,82 @@
+.bg-1 {
+    background-color: #1abc9c; /* Green */
+    color: #ffffff;
+  }
+  .bg-2 {
+    background-color: #474e5d; /* Dark Blue */
+    color: #ffffff;
+  }
+  .bg-3 {
+    background-color: #ffffff; /* White */
+    color: #555555;
+  }
+  .container-fluid {
+  padding-top: 70px;
+  padding-bottom: 70px;
+  }
+  .social-button {
+          font-size: 40px;
+          background: none; 
+          border: none; 
+          color: white; 
+          cursor: pointer; 
+      }
+      
+      .social-button:hover {
+          color: #0073b1; 
+  }
+  .text-button {
+          font-size: 20px;
+          background: #474e5d;
+          text-decoration: none;
+          border: none; 
+          color: white; 
+          cursor: pointer; 
+          display: inline-block;
+          padding: 10px 15px;
+          border-radius: 10px;
+          transition: background-color 0.3s;
+          
+      }
+      .text-button:hover {
+          background-color: #0073b1; 
+          color: white;
+          text-decoration: none;
+  }
+  .headshot-image {
+      width: 200px;
+      height: auto;
+      padding: 20px;
+  }
+  .text-small {
+      font-size: 16px;
+  }
+  .text-medium {
+      font-size: 30px;
+      font-weight: bold;
+  }
+  .text-bold-small {
+    font-size: 17px;
+    font-weight: bold;
+    padding-top: 20px;
+  }
+  .background-resume {
+    align-self: center;
+    padding-top: 100px;
+    font-size: 20px;
+          background: #474e5d;
+          text-decoration: none;
+          border: none; 
+          color: white; 
+          cursor: pointer; 
+          display: inline-block;
+          padding: 10px 15px;
+          border-radius: 10px;
+          transition: background-color 0.3s;
+          
+  }
+  .background-resume:hover {
+    background-color: #0073b1; 
+    color: white;
+    text-decoration: none;
+}
