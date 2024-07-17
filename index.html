@@ -86,8 +86,22 @@
 				timestamp: new Date().toISOString()
 			}));
 		}
-
 		window.addEventListener('load', sendPageView);
 	})();
+	(function() {
+            function sendClickEvent(event) {
+                var xhr = new XMLHttpRequest();
+                xhr.open("POST", "/track-click", true);
+                xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+                xhr.send(JSON.stringify({
+                    elementId: event.target.id,
+                    url: window.location.href,
+                    timestamp: new Date().toISOString()
+                }));
+            }
+
+            document.getElementById('myButton').addEventListener('click', sendClickEvent);
+        })();
+
 </script>
 </body>
