@@ -19,11 +19,16 @@ href=https://waph-uc.github.io/style1.css>
 	#response{background-color: #ff9800;}
 </style>
 <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<!-- <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+<script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script> -->
 <head>
 <meta charset="utf-8">
 <title>WAPH-Morgan Weltzer</title>
 </head>
 <body>
+	<div id="react-app"></div>
+	<script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+<script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
 	<div class = "container wrapper">
 		<div id="top">
 			<h1>Web Application Programming and Hacking</h1>
@@ -201,6 +206,10 @@ href=https://waph-uc.github.io/style1.css>
 	<b>Experiments with Javascript code</b><br>
 	<i>Inlined Javascript</i>
 	<div id="date" onclick="document.getElementById('date').innerHTML= Date()">Click here to show Date()</div>
+	<script language="Javascript">
+		element = React.createElement('h1', {}, 'Morgan Weltzer WAPH Lab 2!');
+		ReactDOM.render(element, document.getElementById('react-app'));
+	</script>
 </div>
 </div>
 </div>
