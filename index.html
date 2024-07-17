@@ -1,11 +1,6 @@
 <!DOCTYPE html>
 <html lang="en"></html>
 <head>
-	<title>Morgan Weltzer Portfolio Website WAPH Project 1</title>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-XXXXX-Y"></script>
 	<!-- Google tag (gtag.js) -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-75ZST0H9DD"></script>
 	<script>
@@ -15,6 +10,11 @@
 
 	gtag('config', 'G-75ZST0H9DD');
 	</script>
+	<title>Morgan Weltzer Portfolio Website WAPH Project 1</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-XXXXX-Y"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -88,20 +88,6 @@
 		}
 		window.addEventListener('load', sendPageView);
 	})();
-	(function() {
-            function sendClickEvent(event) {
-                var xhr = new XMLHttpRequest();
-                xhr.open("POST", "/track-click", true);
-                xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
-                xhr.send(JSON.stringify({
-                    elementId: event.target.id,
-                    url: window.location.href,
-                    timestamp: new Date().toISOString()
-                }));
-            }
-
-            document.getElementById('myButton').addEventListener('click', sendClickEvent);
-        })();
 
 </script>
 </body>
